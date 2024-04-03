@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .jstar{
+            max-height: 200px;
+            
+            display: flex;
+            overflow:auto ;
+            gap: 15px;
+
+        }
+        .jstar::-webkit-scrollbar,.j::-webkit-scrollbar{
+            width: 0;
+        }
+        .m p{
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class=" bg-light" style="height: 95vh;">
+        <div class=" position-relative" style="height: 100%; width: 100%;">
+            <div class="col-12 " style="height: 18%;padding: 10px;margin-left: 3px;">
+                <div class="d-flex flex-column align-items-center" style="width:100%">
+                    <div class="d-flex justify-content-between align-items-center" style="width:98%">
+                        <a href="profile.html" class="text-decoration-none text-dark">
+                            <div class="d-flex align-items-center gap-2 mt-2">
+                                <div style="height: 60px;width: 60px;border-radius: 50%;overflow: hidden;">
+                                    <img src="https://people.com/thmb/ncKubR0Le1r_1o4AKHtXefhVBeI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(749x0:751x2)/john-cena-2-c6c4236cf6f24053814e72ac615e41e2.jpg" alt="" height="120px" width="100%" style="object-fit: cover;">
+                                </div>
+                                <div class="d-flex flex-column justify-content-center mt-3" style="line-height: 0.75px;">
+                                    <p class="text-muted" style="font-size: 11px;">Welcome back</p>
+                                    <p style="font-weight: 700;">John Cena</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div style="margin-left: -50px;">
+                            <i class="bi bi-bell" style="font-size: 1.5rem;" ></i>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center" style="width:100%">
+                        <div class="d-flex border mt-3 justify-content-around align-items-center rounded-3 text-muted bg-white" style="width: 98%;">
+                            <div>
+                                <i class="bi bi-search" style="margin-right: -20px;"></i>
+                            </div>
+                            <div>
+                                <input type="text" class=" w-100" placeholder="Search job, company or City" style="border:none;outline:none;height: 38px;">
+                            </div>
+                            <div>
+                                <i class="bi bi-sliders" style="margin-left: -20px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="j" style="height:70%; width: 100%;margin-top: 10px; padding-left: 16px;overflow: auto; padding-bottom: 8px;">
+                <div>
+                    <h6 style="margin-top: 16px;">Relevant Jobs</h6>
+                    <div class="jstar ">
+                        <a href="Job.html" class="text-decoration-none text-dark">
+                            <div class="rounded-4 p-2 bg-white " style="min-width: 280px;width: 280px; height: 190px;padding-left: 30px;">
+                                <div class="d-flex justify-content-around align-items-center" style="padding-left: 8px;">
+                                    <div class="logo " style="height: 40px;width: 40px; margin-left: -20px;">
+                                        <img src="data:image/png;base64,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" alt="" height="100%" width="100%" class="border rounded-3">
+                                    </div>
+                                    <div class="names " style="margin-left: -15px;" >
+                                        <div class="d-flex flex-column mt-2 justify-content-center" style="line-height: 0.1;height: 100%;padding-top: 5px;">
+                                            <p style="font-weight: 600;font-size: 15px;">Product Designer</p>
+                                            <div class="d-flex gap-3 text-center position-relative">
+                                                <p class="text-muted" style="font-size: 12px;">Traveloka </p> 
+                                                <p style="padding-left: 0px;font-size: 12px;" class="text-muted">jakarta, Indonesia</p>
+                                                <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 60px;top: 0px;background-color: rgb(72, 71, 71);" ></div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="bi bi-bookmark" style="font-size: 20px;margin-right: -10px;"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-2" style="padding-left: 5px;">
+                                    <p class="text-muted" style="font-size: 14px;">Match with your profile</p>
+                                    <div class="d-flex gap-3" style="font-size: 12px;">
+                                        <p class=" bg-light p-2 rounded-1" style="display: inline;">Fulltime</p>
+                                        <p class=" bg-light p-2 rounded-1" style="display: inline;">Remote</p>
+                                        <p class=" bg-light p-2 rounded-1" style="display: inline;">2-4 Years</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex gap-2 text-center position-relative">
+                                            <p class="text-muted" style="font-size: 12px;">an hour ago </p> 
+                                            <p style="padding-left: 0px;font-size: 12px;" class="text-muted">140 Applicant</p>
+                                            <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 67px;top: 7px;background-color: rgb(72, 71, 71);" ></div>
+                                        </div>
+                                        <p class="text-muted" style="font-size: 12px;"><span class="text-info" style="font-weight: 600;font-size: 14px;">$1500</span>/m</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="border rounded-4 p-2 bg-white " style="min-width: 280px;width: 280px; height: 190px;">
+                            <div class="d-flex justify-content-around align-items-center" style="padding-left: 8px;">
+                                <div class="logo " style="height: 40px;width: 40px; margin-left: -20px;">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRo1Sp6xGpqmW6zoftB-GfnCrT-ji4ZjOmqpJ6-_11qfIZDRxxW0QaJSgk4HxrjcxKl4Gc&usqp=CAU" alt="" height="100%" width="100%" class="border rounded-3">
+                                </div>
+                                <div class="names " style="margin-left: -25px;" >
+                                    <div class="d-flex flex-column mt-2 justify-content-center" style="line-height: 0.1;height: 100%;padding-top: 5px;">
+                                        <p style="font-weight: 600;font-size: 15px;">Software Developer</p>
+                                        <div class="d-flex gap-3 text-center position-relative">
+                                            <p class="text-muted" style="font-size: 12px;">Upwork </p> 
+                                            <p style="padding-left: 0px;font-size: 12px;" class="text-muted">jakarta, Indonesia</p>
+                                            <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 50px;top: 0px;background-color: rgb(72, 71, 71);" ></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="icon">
+                                    <i class="bi bi-bookmark" style="font-size: 20px;margin-right: -10px;"></i>
+                                </div>
+                            </div>
+                            <div class="mt-2" style="padding-left: 5px;">
+                                <p class="text-muted" style="font-size: 14px;">Match with your profile</p>
+                                <div class="d-flex gap-3" style="font-size: 12px;">
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">Fulltime</p>
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">Remote</p>
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">2-6 Years</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex gap-2 text-center position-relative">
+                                        <p class="text-muted" style="font-size: 12px;">2 days ago </p> 
+                                        <p style="padding-left: 0px;font-size: 12px;" class="text-muted">360 Applicant</p>
+                                        <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 60px;top: 7px;background-color: rgb(72, 71, 71);" ></div>
+                                    </div>
+                                    <p class="text-muted" style="font-size: 12px;"><span class="text-info" style="font-weight: 600;font-size: 14px;">$1300</span>/m</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-4 p-2 bg-white " style="min-width: 280px;width: 280px; height: 190px;">
+                            <div class="d-flex justify-content-around align-items-center" style="padding-left: 8px;">
+                                <div class="logo " style="height: 40px;width: 40px; margin-left: -20px;">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgn2JgvspOKSPocFyDgPf0Btd608IUPTIXw&usqp=CAU" alt="" height="100%" width="100%" class="border rounded-3">
+                                </div>
+                                <div class="names " style="margin-left: -25px;" >
+                                    <div class="d-flex flex-column mt-2 justify-content-center" style="line-height: 0.1;height: 100%;padding-top: 5px;">
+                                        <p style="font-weight: 600;font-size: 15px;">web Developer</p>
+                                        <div class="d-flex gap-3 text-center position-relative">
+                                            <p class="text-muted" style="font-size: 12px;">Slack </p> 
+                                            <p style="padding-left: 0px;font-size: 12px;" class="text-muted">jakarta, Indonesia</p>
+                                            <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 34px;top: 0px;background-color: rgb(72, 71, 71);" ></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="icon">
+                                    <i class="bi bi-bookmark" style="font-size: 20px;margin-right: -10px;"></i>
+                                </div>
+                            </div>
+                            <div class="mt-2" style="padding-left: 5px;">
+                                <p class="text-muted" style="font-size: 14px;">Match with your profile</p>
+                                <div class="d-flex gap-3" style="font-size: 12px;">
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">Fulltime</p>
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">Remote</p>
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">1-4 Years</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex gap-2 text-center position-relative">
+                                        <p class="text-muted" style="font-size: 12px;">4 days ago </p> 
+                                        <p style="padding-left: 0px;font-size: 12px;" class="text-muted">390 Applicant</p>
+                                        <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 60px;top: 7px;background-color: rgb(72, 71, 71);" ></div>
+                                    </div>
+                                    <p class="text-muted" style="font-size: 12px;"><span class="text-info" style="font-weight: 600;font-size: 14px;">$1800</span>/m</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border rounded-4 p-2 bg-white " style="min-width: 280px;width: 280px; height: 190px;">
+                            <div class="d-flex justify-content-around align-items-center" style="padding-left: 8px;">
+                                <div class="logo " style="height: 40px;width: 40px; margin-left: -20px;">
+                                    <img src="https://st3.depositphotos.com/1001860/16375/i/450/depositphotos_163757632-stock-photo-amazon-logo-on-a-white.jpg alt=" height="100%" width="100%" class="border rounded-3">
+                                </div>
+                                <div class="names " style="margin-left: -25px;" >
+                                    <div class="d-flex flex-column mt-2 justify-content-center" style="line-height: 0.1;height: 100%;padding-top: 5px;">
+                                        <p style="font-weight: 600;font-size: 15px;">Software Engineer</p>
+                                        <div class="d-flex gap-3 text-center position-relative">
+                                            <p class="text-muted" style="font-size: 12px;">Amazon </p> 
+                                            <p style="padding-left: 0px;font-size: 12px;" class="text-muted">jakarta, Indonesia</p>
+                                            <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 50px;top: 0px;background-color: rgb(72, 71, 71);" ></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="icon">
+                                    <i class="bi bi-bookmark" style="font-size: 20px;margin-right: -10px;"></i>
+                                </div>
+                            </div>
+                            <div class="mt-2" style="padding-left: 5px;">
+                                <p class="text-muted" style="font-size: 14px;">Match with your profile</p>
+                                <div class="d-flex gap-3" style="font-size: 12px;">
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">Fulltime</p>
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">Remote</p>
+                                    <p class=" bg-light p-2 rounded-1" style="display: inline;">5-8 Years</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex gap-2 text-center position-relative">
+                                        <p class="text-muted" style="font-size: 12px;">10 days ago </p> 
+                                        <p style="padding-left: 0px;font-size: 12px;" class="text-muted">50 Applicant</p>
+                                        <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 68px;top: 7px;background-color: rgb(72, 71, 71);" ></div>
+                                    </div>
+                                    <p class="text-muted" style="font-size: 12px;"><span class="text-info" style="font-weight: 600;font-size: 14px;">$1800</span>/m</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+               <div class="" style="padding-right: 13px;">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="mt-2">Recent Jobs</h6>
+                        <a href="" class="text-decoration-none text-primary">See All</a>
+                    </div>
+                    <div class="d-flex flex-column gap-3 " style="padding-bottom: 10px;">
+                        <div class="boder rounded-3 bg-white" style="padding: 15px; height: 120px;">
+                            <div class="d-flex justify-content-between align-items-center" style="margin-top: -5px;">
+                                <div class="l d-flex align-items-center gap-2">
+                                    <div class="logo " style="height: 50px;width: 50px;">
+                                        <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg" alt="" height="100%" width="100%" class="border rounded-3">
+                                    </div>
+                                    <div class="flex-column " style="display:flex;line-height: 7px;padding-top: 10px;">
+                                        <p style="font-weight: 600;font-size: 15px;">Software Engineer</p>
+                                        <div class="d-flex gap-3 text-center position-relative">
+                                            <p class="text-muted" style="font-size: 12px;">Discard</p> 
+                                            <p style="padding-left: 0px;font-size: 12px;" class="text-muted">California, US</p>
+                                            <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 50px;top: 0px;background-color: rgb(72, 71, 71);" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: -30px;">
+                                    <i class="bi bi-bookmark-fill text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 mt-2" style="font-size: 12px;">
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">Fulltime</p>
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">Remote</p>
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">1-2 Years</p>
+                            </div>
+                       </div>
+                        <div class="boder rounded-3 bg-white" style="padding: 15px; height: 120px;">
+                            <div class="d-flex justify-content-between align-items-center"style="margin-top: -5px;">
+                                <div class="l d-flex align-items-center gap-2">
+                                    <div class="logo " style="height: 50px;width: 50px;">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjyMNwUX0YgNglFWOW6jKbyHHnkHSD7nEBtw&usqp=CAU" alt="" height="100%" width="100%" class="border rounded-3">
+                                    </div>
+                                    <div class="flex-column " style="display:flex;line-height: 7px;padding-top: 10px;">
+                                        <p style="font-weight: 600;font-size: 15px;">Motion Graphics</p>
+                                        <div class="d-flex gap-3 text-center position-relative">
+                                            <p class="text-muted" style="font-size: 12px;">Gojek </p> 
+                                            <p style="padding-left: 0px;font-size: 12px;" class="text-muted">jakarta, Indonesia</p>
+                                            <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 40px;top: 0px;background-color: rgb(72, 71, 71);" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: -30px;">
+                                    <i class="bi bi-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 mt-2" style="font-size: 12px;">
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">Fulltime</p>
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">Remote</p>
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">0-1 Years</p>
+                            </div>
+                       </div>
+                        <div class="boder rounded-3 bg-white" style="padding: 15px; height: 120px;">
+                            <div class="d-flex justify-content-between align-items-center" style="margin-top: -5px;">
+                                <div class="l d-flex align-items-center gap-2">
+                                    <div class="logo " style="height: 50px;width: 50px;">
+                                        <img src="https://st3.depositphotos.com/1001860/16375/i/450/depositphotos_163757632-stock-photo-amazon-logo-on-a-white.jpg alt=" alt="" height="100%" width="100%" class="border rounded-3">
+                                    </div>
+                                    <div class="flex-column " style="display:flex;line-height: 7px;padding-top: 10px;">
+                                        <p style="font-weight: 600;font-size: 15px;"><a href="Job.html">Associate Engineer</a></p>
+                                        <div class="d-flex gap-3 text-center position-relative">
+                                            <p class="text-muted" style="font-size: 12px;">Amazon </p> 
+                                            <p style="padding-left: 0px;font-size: 12px;" class="text-muted">Hyderabad,Telangana</p>
+                                            <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 50px;top: 0px;background-color: rgb(72, 71, 71);" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: -30px;">
+                                    <i class="bi bi-bookmark-fill text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 mt-2" style="font-size: 12px;">
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">Fulltime</p>
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">Remote</p>
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">1-3 Years</p>
+                            </div>
+                       </div>
+                        <div class="boder rounded-3 bg-white" style="padding: 15px; height: 120px;">
+                            <div class="d-flex justify-content-between align-items-center" style="margin-top: -5px;">
+                                <div class="l d-flex align-items-center gap-2">
+                                    <div class="logo " style="height: 50px;width: 50px;">
+                                        <img src="https://images.ctfassets.net/y2ske730sjqp/5QQ9SVIdc1tmkqrtFnG9U1/de758bba0f65dcc1c6bc1f31f161003d/BrandAssets_Logos_02-NSymbol.jpg?w=940" alt="" height="100%" width="100%" class="border rounded-3">
+                                    </div>
+                                    <div class="flex-column " style="display:flex;line-height: 7px;padding-top: 10px;">
+                                        <p style="font-weight: 600;font-size: 15px;">Software Developer</p>
+                                        <div class="d-flex gap-3 text-center position-relative">
+                                            <p class="text-muted" style="font-size: 12px;">Netflix </p> 
+                                            <p style="padding-left: 0px;font-size: 12px;" class="text-muted">jakarta, Indonesia</p>
+                                            <div style="width: 4px;height: 4px;border-radius: 50%; position: absolute;left: 40px;top: 0px;background-color: rgb(72, 71, 71);" ></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="margin-top: -30px;">
+                                    <i class="bi bi-bookmark"></i>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3 mt-2" style="font-size: 12px;">
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">Fulltime</p>
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">Remote</p>
+                                <p class=" bg-light p-2 rounded-1" style="display: inline;">5-6 Years</p>
+                            </div>
+                       </div>
+                    </div>
+               </div>
+            </div>
+            <div class="col-12 border position-fixed bg-white" style="height: 12%; bottom:0;z-index: 1;">
+                <div class="m  d-flex text-muted  justify-content-evenly align-items-center" style="padding-top: 10px;">
+                    <div class="d-flex flex-column align-items-center text-primary">
+                        <i class="bi bi-house-door" style="font-size: 1.2rem;"></i>
+                        <p >Home</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <a href="Application.html" class="text-decoration-none text-dark"> <i class="bi bi-briefcase" style="font-size: 1.2rem;"></i></a>
+                        <p>Applications</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="bi bi-chat-dots" style="font-size: 1.2rem;"></i>
+                        <p>Message</p>
+                    </div >
+                    <div class="d-flex flex-column align-items-center">
+                        <i class="bi bi-gear" style="font-size: 1.2rem;"></i>
+                        <p>Settings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
